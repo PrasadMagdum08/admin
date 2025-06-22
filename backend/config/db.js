@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
 
-    mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/bookmyturf', {
+    mongoose.connect(process.env.MONGO_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
