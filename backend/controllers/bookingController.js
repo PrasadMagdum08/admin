@@ -14,8 +14,8 @@ exports.upcomingBooking = async (req, res) => {
 // Get all slot bookings
 exports.bookings = async (req, res) => {
     try {
-        const { name, email, phone, date, timeSlot } = req.body;
-        const booking = new Booking({ name, email, phone, date, timeSlot });
+        const { name, phone, date, timeSlot } = req.body;
+        const booking = new Booking({ name, phone, date, timeSlot });
         await booking.save();
         res.status(201).json({ message: 'Booking successful', booking });
     } catch (err) {
