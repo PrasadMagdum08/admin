@@ -174,7 +174,7 @@
     // Fetch bookings and update dashboard
     async function fetchBookings() {
       try {
-        const res = await fetch('http://localhost:5000/api/bookings/upcoming');
+        const res = await fetch('https://admin-r4ub.onrender.com/api/bookings/upcoming/');
         const bookings = await res.json();
 
         // Update stats
